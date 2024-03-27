@@ -71,11 +71,11 @@ $pay = ($total_belanja - $discount) + $ppn;
             <p>Nama Pelanggan : <?= $name  ?></p>
             <p>Produk : <?= $product  ?></p>
             <p>Jumlah Beli : <?= $amount  ?></p>
-            <p>Harga Satuan : <sup>Rp</sup><?= $price  ?></p>
-            <p>Total Belanja : <sup>Rp</sup><?= $total_belanja ?></p>
-            <p>Diskon : <sup>Rp</sup><?= $discount ?></p>
-            <p>PPN : <sup>Rp</sup><?= $ppn ?></p>
-            <p>Harga Bayar : <sup>Rp</sup><?= $pay ?></p>
+            <p>Harga Satuan : <sup>Rp</sup><?= number_format($price, 0, ',', '.') ?></p>
+            <p>Total Belanja : <sup>Rp</sup><?= number_format($total_belanja, 0, ',', '.') ?></p>
+            <p>Diskon : <sup>Rp</sup><?= number_format($discount, 0, ',', '.') ?></p>
+            <p>PPN : <sup>Rp</sup><?= number_format($ppn, 0, ',', '.') ?></p>
+            <p>Harga Bayar : <sup>Rp</sup><?= number_format($pay, 0, ',', '.') ?></p>
         </div>
     </div>
 
