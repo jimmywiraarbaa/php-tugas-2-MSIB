@@ -22,7 +22,7 @@ switch ($product) {
         break;
 
     default:
-        $price = "Belum Inputkan Produk";
+        $price = 0;
         break;
 }
 
@@ -50,10 +50,10 @@ $pay = ($total_belanja - $discount) + $ppn;
         <div class="w-50 bg-warning bg-gradient rounded-3 p-5 mb-3">
             <form action="index.php" method="POST">
                 <label for="name">Nama Pelanggan</label>
-                <input id="name" name="name" type="text" class="form-control mb-3">
+                <input id="name" name="name" type="text" class="form-control mb-3" required>
 
                 <label for="product">Produk</label>
-                <select id="product" name="product" class="form-select mb-3" aria-label="Default select example">
+                <select id="product" name="product" class="form-select mb-3" aria-label="Default select example" required>
                     <option selected>-- Pilih Produk --</option>
                     <option value="TV">TV</option>
                     <option value="Kulkas">Kulkas</option>
@@ -62,7 +62,7 @@ $pay = ($total_belanja - $discount) + $ppn;
                 </select>
 
                 <label for="amount">Jumlah Beli</label>
-                <input id="number" name="amount" type="number" class="form-control mb-3">
+                <input id="number" name="amount" type="number" class="form-control mb-3" required>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
